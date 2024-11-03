@@ -4,9 +4,10 @@ import {ref} from "vue";
 <template>
 
     <div>
-        <h1>Countries of the World</h1>
+        <h1 class="website-title" id="top">Countries of the World</h1>
         <SearchBar />
         <slot />
+        <TopButton />
     </div>
 
 </template>

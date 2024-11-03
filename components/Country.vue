@@ -9,9 +9,13 @@ const countryProp = defineProps({
 
 </script>
 <template>
-    <div class="country__card">
-        <h2 class="country__title">Country: {{ countryProp.name }}</h2>
-        <img class="country__flag" :src="countryProp.flag" :alt="countryProp.alt">
-        <NuxtLink class="country__link" :to="`/${countryProp.name}`">Find out more -> </NuxtLink>
+    <div class="country-card__container">
+        <div class="country-card__card">
+            <h2 class="country-card__title">{{ countryProp.name }}</h2>
+            <img class="country-card__flag" :src="countryProp.flag" :alt="countryProp.alt">
+            <div class="country-card__link-container">
+                <NuxtLink class="country-card__link" :to="`/${countryProp.name}`">More Info <i class="fa-regular fa-circle-right"></i></NuxtLink>
+            </div>
+        </div>
     </div>
 </template>

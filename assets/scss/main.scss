@@ -1,2 +1,13 @@
+//utils
 @import 'variables';
-@import 'country';
+@import 'generic';
+
+//components
+@import 'countryCards';
+@import 'searchBar';
+
+//pages
+@import 'countryPage';
+
+//responsive
+@import 'responsive';

@@ -1,16 +1,26 @@
 //colors scheme
-$c1: #262626;
-$c2: #732c39;
-$c3: #6a7371;
-$c4: #c5d3d9;
-$c5: #e9f0f2;
+$c0: #0d0d0d;
+$c1: #373737;
+$c2: #91988a;
+$c3: #d7d8c6;
+$c4: #ede7db;
+$c5: #f3f0e3;
 
 
 
-$dark: $c1;
-$light: $c5;
+$dark: $c0;
+$light: $c4;
+$mid: $c1;
 
 $accent-dark: $c2;
 $accent-mid: $c3;
 $accent-light: $c4;
+
+//sizes 
+$major-title: 2.5rem;
+$minor-title: 1.8rem;
+$mini-title: 1.5rem;
+$sub-title: 1.2rem;
+$text: 1rem;
+$small-text: .7rem;
 

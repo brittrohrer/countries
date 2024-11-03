@@ -1,0 +1,9 @@
+@media only screen and (min-width:481px ) {
+    .countries {
+        &__list {
+            flex-direction: row;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+    }
+}

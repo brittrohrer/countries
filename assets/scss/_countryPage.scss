@@ -1,0 +1,39 @@
+.country-page {
+    display: flex;
+    justify-content: center;
+    margin: 1rem;
+    &__container {
+        background: $accent-mid;
+        width: 40rem;
+        height: max-content;
+        padding: 1rem;
+    }
+    &__name {
+        font-size: $minor-title;
+        color: $mid;
+    }
+    &__flag {
+        width: 100%;
+    }
+    &__details-list {
+        color: $mid;
+    }
+    &__details-group {
+        margin-bottom: 1rem;
+    }
+    &__details-title {
+        display: inline;
+        font-size: $mini-title;
+        color: $mid;
+    }
+    &__details-sub-title {
+        font-size: $sub-title;
+        display: inline;
+        color: $mid;
+    }
+    &__details-text {
+        color: $mid;
+        display: inline;
+        font-size: $text;
+    }
+}

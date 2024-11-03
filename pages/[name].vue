@@ -27,31 +27,60 @@ onMounted(async() => {
 
 </script>
 <template>
-    <div>
-        <div v-for="country in countries" :key="country.name.common">
-            <h2>Country: {{ country.name.common }}</h2>
-            <div>
-                <p>Continent: {{ country.continents[0] }}</p>
-                <p>Region: {{ country.region }}</p>
-                <p>Sub-Region: {{ country.subregion }}</p>
-                <p>Capital: {{ country.capital[0] }}</p>
-                <p>Population: {{ country.population.toLocaleString() }}</p>
-                <div>
-                    <p>Languages:</p>
-                        <ul>
-                            <li v-for="lang in country.languages" :key="lang">
-                                {{ lang }}
-                            </li>
-                        </ul>
+    <div class="country-page">
+        <div class="country-page__container" v-for="country in countries" :key="country.name.common">
+            <h2 class="country-page__name">{{ country.name.common }}</h2>
+            <div class="country-page__details-container row">
+                <div class="col-lg-6">
+                    <img class="country-page__flag" :src="country.flags.png">
                 </div>
-                <div>
-                    <p>Currencies:</p>
-                        <ul>
-                            <li v-for="curr in country.currencies" :key="curr.name">
-                                <p>Name: {{ curr.name }}</p>
-                                <p>Symbol: {{ curr.symbol }}</p>
-                            </li>
-                        </ul>
+                <div class="col-lg-6">
+                    <div class="country-page__details-group">
+                        <h3 class="country-page__details-title">Continent: </h3>
+                        <p class="country-page__details-text">{{ country.continents[0] }}</p>
+                    </div>
+                    <div class="country-page__details-group">
+                        <h3 class="country-page__details-title">Region: </h3>
+                        <p class="country-page__details-text">{{ country.region }}</p>
+                    </div>
+                    <div class="country-page__details-group">
+                        <h3 class="country-page__details-title">Sub-Region: </h3>
+                        <p class="country-page__details-text">{{ country.subregion }}</p>
+                    </div>
+                    <div class="country-page__details-group">
+                        <h3 class="country-page__details-title">Capital: </h3>
+                        <p class="country-page__details-text">{{ country.capital[0] }}</p>
+                    </div>
+                    <div class="country-page__details-group">
+                        <h3 class="country-page__details-title">Population: </h3>
+                        <p class="country-page__details-text">{{ country.population.toLocaleString() }}</p>
+                    </div>
+                    <div class="country-page__details-group">
+                        <h3 class="country-page__details-title">Languages:</h3>
+                            <ul>
+                                <li  class="country-page__details-list" v-for="lang in country.languages" :key="lang">
+                                    <p class="country-page__details-text">{{ lang }}</p>
+                    
+                                </li>
+                            </ul>
+                    </div>
+                    <div class="country-page__details-group">
+                        <h3 class="country-page__details-title">Currencies:</h3>
+                            <ul>
+                                <li class="country-page__details-list" v-for="curr in country.currencies" :key="curr.name">
+                                    <div>
+                                        <div>
+                                            <h4 class="country-page__details-sub-title">Name: </h4>
+                                            <p class="country-page__details-text">{{ curr.name }}</p>
+                                        </div>
+                                        <div>
+                                            <h4 class="country-page__details-sub-title">Symbol: </h4>
+                                            <p class="country-page__details-text">{{ curr.symbol }}</p>
+                                        </div>
+                                    </div>
+                                </li>
+                            </ul>
+                    </div>
                 </div>
             </div>
         </div>

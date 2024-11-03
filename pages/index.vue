@@ -22,9 +22,9 @@ onMounted(async() => {
 </script>
 
 <template>
-    <div>
-        <ul>
-            <li v-for="c in countries" :key="c.name.common">
+    <div class="countries__container">
+        <ul class="countries__list">
+            <li class="countries__list-item" v-for="c in countries" :key="c.name.common">
                 <Country
                     :name="c.name.common"
                     :flag="c.flags.png" 
