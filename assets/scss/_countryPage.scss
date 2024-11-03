@@ -7,10 +7,13 @@
         width: 40rem;
         height: max-content;
         padding: 1rem;
+        border-radius: 10px;
     }
     &__name {
-        font-size: $minor-title;
+        font-size: $major-title;
         color: $mid;
+        text-align: center;
+        margin: 1rem auto 2rem;
     }
     &__flag {
         width: 100%;
@@ -23,11 +26,11 @@
     }
     &__details-title {
         display: inline;
-        font-size: $mini-title;
+        font-size: $minor-title;
         color: $mid;
     }
     &__details-sub-title {
-        font-size: $sub-title;
+        font-size: $mini-title;
         display: inline;
         color: $mid;
     }

@@ -32,7 +32,7 @@ onMounted(async() => {
             <h2 class="country-page__name">{{ country.name.common }}</h2>
             <div class="country-page__details-container row">
                 <div class="col-lg-6">
-                    <img class="country-page__flag" :src="country.flags.png">
+                    <img class="country-page__flag" :src="country.flags.png" :alt="country.flags.alt" aria-label="country flag">
                 </div>
                 <div class="col-lg-6">
                     <div class="country-page__details-group">

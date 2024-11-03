@@ -19,19 +19,31 @@ onMounted(async() => {
         
 });
 
+const searchBar = document.getElementById('search-bar');
+
+searchBar.addEventListener('displaySearch', (e) => {
+    console.log(e);
+})
+
 </script>
 
 <template>
-    <div class="countries__container">
-        <ul class="countries__list">
-            <li class="countries__list-item" v-for="c in countries" :key="c.name.common">
-                <Country
-                    :name="c.name.common"
-                    :flag="c.flags.png" 
-                    :alt="c.flags.alt"
-                />
-            </li>
-        </ul>
-
+    <div>
+        <div>
+            <div class="search-wrapper">
+                <input class="search-bar" type="search" id="search-bar" placeholder="Search for Country by Name" data-search>
+            </div>
+        </div>
+        <div class="countries__container">
+            <ul class="countries__list">
+                <li class="countries__list-item" v-for="c in countries" :key="c.name.common">
+                    <Country
+                        :name="c.name.common"
+                        :flag="c.flags.png"
+                        :alt="c.flags.alt"
+                    />
+                </li>
+            </ul>
+        </div>
     </div>
 </template>
