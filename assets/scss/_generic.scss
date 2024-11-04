@@ -7,8 +7,9 @@ body {
 }
 .website-title {
     color: $light;
-    font-size: $major-title;
+    font-size: $mega-title;
     text-align: center;
+    padding: 2rem;
 }
 
 .top-button {
@@ -34,4 +35,13 @@ body {
         padding: 1rem;
         font-size: $mini-title;
     }
+}
+.search-wrapper {
+    display: flex;
+    justify-content: center;
+    margin: 2rem;
+}
+.search-bar {
+    width: 30rem;
+    border-radius: 5px;
 }
